@@ -11,6 +11,7 @@ form {
 }
 
 .li-pair {
+    width: 100%;
     margin-bottom: 5%;
     text-align: left;
 }
@@ -24,11 +25,31 @@ form {
 
 .li-pair input {
     font-size: 15px;
-    width: 100%;
-    padding: 3% 2%;
     outline: none;
     border: none;
     border-radius: 5px;
+}
+.fullname, .email, .phone {
+    width: 95%;
+    padding: 3% 2%;
+}
+
+.li-pair div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.pass, .confirmPass {
+    width: 100%;
+    padding: 3% 15% 3% 2%;
+}
+
+.eye {
+    position: absolute;
+    width: 13%;
 }
 
 input::-webkit-outer-spin-button,
@@ -37,9 +58,9 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-/* Firefox */
-input[type=number] {
-  -moz-appearance: textfield;
+.warning {
+    font-size: 14px;
+    color: red;
 }
 
 .sbutton {
@@ -56,4 +77,14 @@ input[type=number] {
     outline: none;
     cursor: pointer;
     background-color: white;
+}
+
+.success {
+    color: green;
+}
+
+@media screen and (max-width:900px) {
+    form {
+        width: 35%;
+    }
 }
